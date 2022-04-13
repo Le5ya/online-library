@@ -1,1 +1,22 @@
-@font-face{font-family:Roboto;font-weight:400;font-display:swap;src:url(../fonts/Roboto-400.woff2) format("woff2"),url(../fonts/Roboto-400.woff) format("woff")}@font-face{font-family:Roboto;font-weight:700;font-display:swap;src:url(../fonts/Roboto-700.woff2) format("woff2"),url(../fonts/Roboto-700.woff) format("woff")}@font-face{font-family:Roboto;font-weight:900;font-display:swap;src:url(../fonts/Roboto-900.woff2) format("woff2"),url(../fonts/Roboto-900.woff) format("woff")}body{font-family:sans-serif}
+@font-face {
+  font-family: Roboto;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Roboto-400.woff2") format("woff2"), url("../fonts/Roboto-400.woff") format("woff");
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Roboto-700.woff2") format("woff2"), url("../fonts/Roboto-700.woff") format("woff");
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/Roboto-900.woff2") format("woff2"), url("../fonts/Roboto-900.woff") format("woff");
+}
+body {
+  font-family: sans-serif;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInZhci5zY3NzIiwiaW5kZXguc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDSTtFQUVRLGFDREU7RURFRixhQ0ZVO0VER1Y7RUFHSjs7QUFQSjtFQUVRO0VBQ0EsYUNEVTtFREVWO0VBR0o7O0FBUEo7RUFFUSxhQ0NFO0VEQUY7RUFDQTtFQUdKOztBQ0ZSO0VBQ0kiLCJmaWxlIjoiaW5kZXgubWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBtaXhpbiBmb250KCRuYW1lLCAkd2VpZ2h0KSB7XHJcbiAgICBAZm9udC1mYWNlIHtcclxuICAgICAgICBmb250OiB7XHJcbiAgICAgICAgICAgIGZhbWlseTogJG5hbWU7XHJcbiAgICAgICAgICAgIHdlaWdodDogJHdlaWdodDtcclxuICAgICAgICAgICAgZGlzcGxheTogc3dhcDtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIHNyYzogdXJsKFwiLi4vZm9udHMvI3sgJG5hbWUgfS0jeyAkd2VpZ2h0IH0ud29mZjJcIikgZm9ybWF0KFwid29mZjJcIiksXHJcbiAgICAgICAgdXJsKFwiLi4vZm9udHMvI3sgJG5hbWUgfS0jeyAkd2VpZ2h0IH0ud29mZlwiKSBmb3JtYXQoXCJ3b2ZmXCIpO1xyXG4gICAgfVxyXG59IiwiQGltcG9ydCAndmFyJztcclxuXHJcbkBpbmNsdWRlIGZvbnQoUm9ib3RvLCA0MDApO1xyXG5AaW5jbHVkZSBmb250KFJvYm90bywgNzAwKTtcclxuQGluY2x1ZGUgZm9udChSb2JvdG8sIDkwMCk7XHJcblxyXG5ib2R5IHtcclxuICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xyXG59Il19 */
