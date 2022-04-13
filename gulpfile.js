@@ -52,8 +52,7 @@ const path = {
         html: 'src/*.html',
         scss: 'src/scss/**/*.scss',
         js: 'src/js/**/*.*',
-        // img: 'src/img/**/*.{jpg,svg,jpeg,png,gif}',
-        img: 'src/img/**/*.{jpg,jpeg,png}',
+        img: 'src/img/**/*.{jpg,svg,jpeg,png,gif}',
         imgF: 'dist/img/'
     }
 };
@@ -153,6 +152,7 @@ const webp = () => gulp
     })
     );
 
+
 export const avif = () => gulp
     .src(path.src.imgF)
     .pipe(gulpAvif({
@@ -195,14 +195,16 @@ export const server = () => {
     gulp.watch(path.src.assets, copy);
 
 };
+
+const clear = () => del(path.dist.base, {
+    force: true,
+});
+
 const develop = (ready) => {
     dev = true;
     ready();
 
 };
-export const clear = () => del(path.dist.base, {
-    force: true,
-});
 export const base = gulp.parallel(html, scss, js, image, avif, webp, copy);
 export const build = gulp.series(clear, base);
 export default gulp.series(develop, base, server);
