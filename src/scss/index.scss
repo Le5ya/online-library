@@ -1,9 +1,17 @@
+@import '_normalize';
+@include normalize();
 @import 'var';
+@import '_fonts';
+@import '_default';
 
-@include font(Roboto, 400);
-@include font(Roboto, 700);
-@include font(Roboto, 900);
+@import 'blocks/_header';
+@import 'blocks/_library';
+@import 'blocks/_cart';
+
+@import 'blocks/_footer';
+
+
 
 body {
-    font-family: sans-serif;
+    font-family: montserrat, sans-serif;
 }
