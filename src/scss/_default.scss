@@ -1,7 +1,7 @@
 html {
     position: relative;
     box-sizing: border-box;
-    min-width: 360px;
+    min-width: 320px;
   }
   
   *,
@@ -97,9 +97,12 @@ html {
   это половина от расстояния между блоками
   */
   
-  section {
-    padding: 50px 0;
-  }
+  // section {
+  //   padding: 50px 0;
+  // }
   .hidden {
     display: none;
+  }
+  section {
+    padding-bottom: 80px;
   }
