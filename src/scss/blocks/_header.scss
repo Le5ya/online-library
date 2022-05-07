@@ -1,5 +1,11 @@
 .header  {
-    padding: 8px 0;  
+    padding: 8px 0;
+    @include tablet {
+        padding: 20px 15px;
+    }  
+    @include desktop {
+        padding: 30px 25px;
+    }  
     &__container {
         display: flex;
         align-items: center;
@@ -9,10 +15,13 @@
     &__logo {
         height: 40px;
         width: 61px;
+        @include laptop {
+            height: 66px;
+        }
     }
-    &__btn-add{
-    display: none;
-    }
+  &__btn-add{
+     display: none;
+     }  
     &__btn {
     width: 40px;
     height: 40px;
@@ -24,6 +33,12 @@
     }
     &__btn-search{
     background-image: url("../img/search.svg");  
+    }
+    &__btn-delete{
+    background-image: url("../img/delete.svg");  
+    }
+    &__btn_back{
+    background-image: url("../img/back.svg");  
     }
 
 

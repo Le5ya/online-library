@@ -90,6 +90,13 @@ html {
     max-width: 1260px;
     padding: 0 20px;
     margin: 0 auto;
+
+    @include tablet {
+      padding: 0 35px;
+    }
+    @include laptop {
+      padding: 0 45px;
+    }
   }
   
   /*

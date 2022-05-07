@@ -1,6 +1,22 @@
 .library {
     &__header {
         margin-bottom: 15px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 174px;
+            height: 174px;
+            left: -76px;
+            top: -73px;
+            background-color: #ff0000;
+            filter: blur(90px);
+            z-index: 1;
+            @include tablet {
+                content: none;
+            }
+        }
     
     }
     &__titles {
