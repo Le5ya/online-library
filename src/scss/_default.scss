@@ -25,11 +25,14 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-  
-  
+   
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  input, button, textarea {
+    font: inherit;
   }
   
   

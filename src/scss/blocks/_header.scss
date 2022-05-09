@@ -1,7 +1,7 @@
 .header  {
     padding: 8px 0;
     @include tablet {
-        padding: 20px 15px;
+        padding: 20px 0 15px;
     }  
     @include desktop {
         padding: 30px 25px;
@@ -14,33 +14,47 @@
     }
     &__logo {
         height: 40px;
-        width: 61px;
+        margin-right: auto;
         @include laptop {
             height: 66px;
         }
     }
-  &__btn-add{
-     display: none;
+    &__btn-add{
+        display: none;
+
+        @include laptop {
+            display: block;
+            width: 320px;
+            height: 50px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            color: $lite;
+            background-color: $primary;
+            border-radius: 8px;
+            border: 0;
+            margin-right: 106px;
+        }
      }  
     &__btn {
-    width: 40px;
-    height: 40px;
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: 0;
-    background-position: center right;
-    }
-    &__btn-search{
-    background-image: url("../img/search.svg");  
-    }
-    &__btn-delete{
-    background-image: url("../img/delete.svg");  
-    }
-    &__btn_back{
-    background-image: url("../img/back.svg");  
-    }
-
+        width: 40px;
+        height: 40px;
+        background-size: 24px;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: 0;
+        background-position: right;
+        &-search{
+            background-image: url("../img/search.svg");  
+        }
+        &-delete{
+            background-image: url("../img/delete.svg");  
+        }
+        &-back{
+            background-position: left;
+            background-image: url("../img/back.svg");  
+        }
+}
 
 
 }

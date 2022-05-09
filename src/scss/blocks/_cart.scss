@@ -8,6 +8,10 @@
     margin-top: 10px;
     display: flex;
     gap: 10px;
+
+    @include desktop {
+        max-width: 372px;
+    }
     &__wrapper {
         position: relative;
         width: 100px;

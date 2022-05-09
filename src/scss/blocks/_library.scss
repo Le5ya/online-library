@@ -44,13 +44,14 @@
     }
     &__list {
         display: flex;
-        flex-wrap: wrap;
         gap: 15px 26px;
+        flex-wrap: wrap;
+        max-width: 780px;
         
     }
     &__add-btn {
         background-color: transparent;
-        border: 0;
+        border: none;
         color: $primary;
         
     }

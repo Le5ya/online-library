@@ -112,11 +112,11 @@
 					<a href="/book" data-navigo>
 						<article class="cart">
 							<div class="cart__wrapper">
-								<img src="./img/temp.jpg" alt="temp" class="cart__img">
+								<img src="./img/temp.jpg" alt="temp" class="cart__img"/>
 								<p class="cart__label">хочу прочитать</p>
 							</div>
 							<div class="cart__content">
-								<h3 class="cart__title">Гарри Поттер и Философский камень/h3>
+								<h3 class="cart__title">Гарри Поттер и Философский камень</h3>
 									<p class="cart__author">Джоан Роулинг</p>
 									<p class="cart__description">
 										Первый роман в серии книг про юного волшебника
@@ -148,7 +148,7 @@
 	<section class="book hidden">
 		<header class="header book__header">
 			<div class="container header__container">
-				<button class="header__btn_back">назад</button>
+				<button class="header__btn header__btn-back"></button>
 
 				<button class="header__btn header__btn-delete">
 				</button>
@@ -194,9 +194,9 @@
 		<h2 class="visually-hidden">Добавить книгу</h2>
 		<header class="header add__header">
 			<div class="container header__container">
-				<button class="header__btn_back">назад</button>
+				<button class="header__btn-back">назад</button>
 
-				<button class="header__btn header__search">
+				<button class="header__btn header__delete">
 					удалить
 				</button>
 			</div>
@@ -256,8 +256,21 @@
 				<button class="footer__btn add__btn">Далее</button>
 			</div>
 		</form>
-
 	</section>
+	<div class="search">
+		<div class="container">
+			<from class="search__form">
+				<label>
+					<input type="search" class="search__input">
+				</label>
+				<button class="search__button">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="currentColor"/>
+						</svg>
+				</button>
+			</from>
+		</div>
+	</div>
 </body>
 
 </html>

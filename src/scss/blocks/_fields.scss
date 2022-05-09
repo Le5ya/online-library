@@ -1,9 +1,14 @@
 .fields {
    display: flex;
    justify-content: space-between;
+
     &__block {
         position: relative;
         z-index: 3;
+
+        @include laptop {
+            max-width: 142px;
+        }
     }
     &__btn {
         display: flex;
@@ -19,16 +24,27 @@
         &:hover {
             color: $primary;
         }
+        @include laptop {
+            font-size: 14px;
+            width: 100%;
+        }
     }
     &__list {
         display: none;
+        min-width: 100%;
         position: absolute;
         top: calc(100% + 3px);
         background-color: $lite;
         color: $dark;
         padding: 15px;
         white-space: nowrap;
+        // width: max-content;
         box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+
+        @include laptop {
+            top: calc(100% + 20px);
+        }
         &_active {
             display: block;
         }
@@ -44,6 +60,9 @@
                 right: -8px;
             }
         } 
+        @include laptop {
+            display: block;
+        }
     }
     &__item {
         margin-bottom: 15px;
@@ -55,6 +74,8 @@
         background-color: $secondary;
         border-radius: 16px;
         border: 0;
-        padding: 8px;   
+        padding: 8px;
+        font-size: 12px;
+        line-height: 100%;  
     }   
 }

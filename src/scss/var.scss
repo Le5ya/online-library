@@ -23,7 +23,7 @@ $secondaryDark: #6b6b6b;
     @media(min-width: 1280px) {
         @content
     }
-}
+};
 
 @mixin font($name, $weight) {
     @font-face {

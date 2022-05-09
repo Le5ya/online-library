@@ -4,10 +4,16 @@
 @import '_fonts';
 @import '_default';
 
+@include font(Montserrat, 400);
+@include font(Montserrat, 700);
+@include font(montserrat, 900);
+
 @import 'blocks/_header';
 @import 'blocks/_library';
 @import 'blocks/_fields';
 @import 'blocks/_cart';
+
+@import 'blocks/_search';
 
 @import 'blocks/_footer';
 
