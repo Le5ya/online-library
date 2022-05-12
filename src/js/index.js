@@ -9,7 +9,6 @@ const backBtns = document.querySelectorAll('.header__btn-back');
 const btnSearch = document.querySelectorAll('.header__btn-search');
 const search = document.querySelectorAll('.search');
 
-
 const router = new Navigo('/', {
     hash: true,
 });
