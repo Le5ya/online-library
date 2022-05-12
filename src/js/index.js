@@ -18,7 +18,6 @@ const closeAllPage = () => {
     book.classList.add('hidden');
     add.classList.add('hidden');  
 }
-
 router.on({
     '/': () => {
         closeAllPage();
