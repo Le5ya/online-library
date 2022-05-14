@@ -1,7 +1,6 @@
 .library {
     &__header {
         margin-bottom: 15px;
-
         &::before {
             content: '';
             display: block;
@@ -10,9 +9,9 @@
             height: 174px;
             left: -76px;
             top: -73px;
-            background-color: #ff0000;
+            background-color: rgb(255, 0, 0);
             filter: blur(90px);
-            z-index: 1;
+            z-index: -1;
             @include tablet {
                 content: none;
             }

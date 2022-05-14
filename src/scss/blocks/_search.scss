@@ -1,32 +1,29 @@
-.search {
-    $height: 80px;
-    $top: 8px;
+.search {    
+    $h: 80px;
+    $t: 8px;
     width: 100%;
     position: absolute;
     right: 0;
-    top: -$top - $height;
+    top: -$h -$t;
     transition: transform .3s ease-in-out;
-    border: 3px solid red;
-
     &_active {
-        transform: translateY($top * 2 + $height);
-    }
-
+         transform: translateY($t * 2 + $h);
+     }
     &__form {
         position: relative;     
     }
     &__input {
         width: 100%;
-        height: $heigh;
+        height: $h;
         background: #fff;
         border-radius: 20px;
         padding: 3px 40px 3px 15px;
         outline: 1px solid transparent;
         outline-offset: -1px;
+        border: 0;
         &:focus {
             outline-color: #5b5b5b ;
-        }
-        border: 0;
+        } 
     }
     &__button {
         position: absolute;

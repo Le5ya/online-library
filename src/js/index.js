@@ -7,7 +7,7 @@ const add = document.querySelector('.add');
 const addBtns = document.querySelectorAll('.header__btn-add, .library__add-btn');
 const backBtns = document.querySelectorAll('.header__btn-back');
 const btnSearch = document.querySelectorAll('.header__btn-search');
-const search = document.querySelectorAll('.search');
+const search = document.querySelector('.search');
 
 const router = new Navigo('/', {
     hash: true,

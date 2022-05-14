@@ -1,15 +1,12 @@
 @import '_normalize';
 @include normalize();
 @import 'var';
-@import '_fonts';
+@import 'fonts';
 @import '_default';
-
-@include font(Montserrat, 400);
-@include font(Montserrat, 700);
-@include font(montserrat, 900);
 
 @import 'blocks/_header';
 @import 'blocks/_library';
+@import 'blocks/_book';
 @import 'blocks/_fields';
 @import 'blocks/_cart';
 
@@ -18,6 +15,9 @@
 @import 'blocks/_footer';
 
 
+@include font(montserrat, 400);
+@include font(montserrat, 500);
+@include font(montserrat, 700);
 
 body {
     font-family: montserrat, sans-serif;
