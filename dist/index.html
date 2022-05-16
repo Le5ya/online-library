@@ -10,7 +10,7 @@
 	<script src="js/index.min.js" defer></script>
 </head>
 
-<body>
+<body class="body">
 	<section class="library">
 		<header class="header library__header">
 			<div class="container header__container">
@@ -50,7 +50,7 @@
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M4.24999 5.61C6.26999 8.2 9.99999 13 9.99999 13V19C9.99999 19.55 10.45 20 11 20H13C13.55 20 14 19.55 14 19V13C14 13 17.72 8.2 19.74 5.61C20.25 4.95 19.78 4 18.95 4H5.03999C4.20999 4 3.73999 4.95 4.24999 5.61Z"
-								fill="white" />
+								fill="currentColor" />
 						</svg>
 						<span class="fields__text">Фильтр</span>
 					</button>
@@ -112,22 +112,22 @@
 					<a href="/book" data-navigo>
 						<article class="cart">
 							<div class="cart__wrapper">
-								<img src="./img/temp.jpg" alt="temp" class="cart__img"/>
+								<img src="./img/temp.jpg" alt="temp" class="cart__img" />
 								<p class="cart__label">хочу прочитать</p>
 							</div>
 							<div class="cart__content">
 								<h3 class="cart__title">Гарри Поттер и Философский камень</h3>
-									<p class="cart__author">Джоан Роулинг</p>
-									<p class="cart__description">
-										Первый роман в серии книг про юного волшебника
-										Гарри Поттера, написанный Дж. К. Роулинг. В нём...
-									</p>
-									<div class="cart__rating">
-										<img src="./img/star.svg" alt="Ретинг 4 из 5" class="star cart__rating=star">
-										<img src="./img/star.svg" alt="" class="star cart__rating=star">
-										<img src="./img/star.svg" alt="" class="star cart__rating=star">
-										<img src="./img/star-o.svg" alt="" class="star cart__rating=star">
-									</div>
+								<p class="cart__author">Джоан Роулинг</p>
+								<p class="cart__description">
+									Первый роман в серии книг про юного волшебника
+									Гарри Поттера, написанный Дж. К. Роулинг. В нём...
+								</p>
+								<div class="cart__rating">
+									<img src="./img/star.svg" alt="Ретинг 4 из 5" class="star cart__rating=star">
+									<img src="./img/star.svg" alt="" class="star cart__rating=star">
+									<img src="./img/star.svg" alt="" class="star cart__rating=star">
+									<img src="./img/star-o.svg" alt="" class="star cart__rating=star">
+								</div>
 							</div>
 						</article>
 					</a>
@@ -137,11 +137,13 @@
 		<footer class="footer">
 			<button class="footer__btn library__add-btn" aria-label="Добавить книгу">
 				<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<circle cx="22" cy="22" r="22" fill="currentColor"/>
-					<rect x="21.7767" y="9.21667" width="0.433333" height="25.5667" fill="#242424" stroke="white" stroke-width="0.433333"/>
-					<rect x="9.21667" y="22.2233" width="0.433333" height="25.5667" transform="rotate(-90 9.21667 22.2233)" fill="#242424" stroke="white" stroke-width="0.433333"/>
-					</svg>
-					
+					<circle cx="22" cy="22" r="22" fill="currentColor" />
+					<rect x="21.7767" y="9.21667" width="0.433333" height="25.5667" fill="#242424" stroke="white"
+						stroke-width="0.433333" />
+					<rect x="9.21667" y="22.2233" width="0.433333" height="25.5667" transform="rotate(-90 9.21667 22.2233)"
+						fill="#242424" stroke="white" stroke-width="0.433333" />
+				</svg>
+
 			</button>
 		</footer>
 	</section>
@@ -193,33 +195,33 @@
 		<h2 class="visually-hidden">Добавить книгу</h2>
 		<header class="header add__header">
 			<div class="container header__container">
-				<button class="header__btn-back">назад</button>
+				<button class="header__btn header__btn-back">назад</button>
 
 				<button class="header__btn header__delete">
 					удалить
 				</button>
 			</div>
 		</header>
-		<form action="">
+		<form class="add__form">
 			<div class="container add__container">
 				<fieldset class="add__fieldset">
 					<legend class="add__title">Название и описание</legend>
 					<p class="add__stap">шаг 1/3</p>
-					<label for="title" class="add__label"></label>
+					<label for="title" class="add__label">Название</label>
 					<input type="text" class="add__text" name="title" id="title">
-					<label for="author" class="add__label"></label>
+					<label for="author" class="add__label">Автор</label>
 					<input type="text" class="add__text" name="author" id="author">
-					<label for="description" class="add__label"></label>
+					<label for="description" class="add__label">Описание</label>
 					<textarea type="text" class="add__text add__text_area" name="description" id="description"></textarea>
 				</fieldset>
 				<fieldset class="add__fieldset">
 					<legend class="add__title">Обложка</legend>
 					<p class="add__stap">шаг 2/3</p>
 					<div class="upload">
-						<p class="add__subtitle">Загрузите обложку</p>
+						<p class="upload__title">Загрузите обложку</p>
 						<label class="upload__label">
-							<img src="about:blank" alt="Превью изображения" class="apload__preview">
-							<input type="file" class="apload__file" accept="image/*">
+							<img src="about:blank" alt="Превью изображения" class="upload__preview">
+							<input type="file" class="upload__file" accept="image/*">
 						</label>
 					</div>
 				</fieldset>
@@ -264,8 +266,10 @@
 				</label>
 				<button class="search__button">
 					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="currentColor"/>
-						</svg>
+						<path
+							d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
+							fill="currentColor" />
+					</svg>
 				</button>
 			</from>
 		</div>
