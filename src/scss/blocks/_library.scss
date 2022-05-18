@@ -1,6 +1,7 @@
 .library {
     &__header {
         margin-bottom: 15px;
+
         &::before {
             content: '';
             display: block;
@@ -12,46 +13,59 @@
             background-color: rgb(255, 0, 0);
             filter: blur(90px);
             z-index: -1;
+
             @include tablet {
                 content: none;
             }
         }
-    
+
     }
+
     &__titles {
         margin-bottom: 20px;
-        
+
     }
+
     &__title {
         font-weight: 700;
         font-size: 26px;
         line-height: 32px;
         margin-bottom: 8px;
-        
+
     }
+
     &__count {
         font-size: 14px;
         line-height: 120%;
         color: $secondary;
         margin-bottom: 20px;
-        
+
     }
+
     &__list-container {
         @media(max-width: 376px) {
-          padding: 0 12px;  
-        }    
+            padding: 0 12px;
+        }
     }
+
     &__list {
         display: flex;
         gap: 15px 26px;
         flex-wrap: wrap;
         max-width: 780px;
-        
+
     }
+
     &__add-btn {
         background-color: transparent;
         border: none;
         color: $primary;
-        
+
+    }
+
+    &__footer {
+        @include laptop {
+            display: none;
+        }
     }
 }

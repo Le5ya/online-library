@@ -110,7 +110,14 @@ const changeFieldset = () => {
                 addBtn.textContent = 'Добавить книгу';
             }
             if (count === fieldsets.length) {
-                form.reset();
+
+                const data = true;
+                if (data) {
+                    form.reset();
+                    router.navigate('/');
+                    count = 0;
+                    addBtn.textContent = 'Далее';
+                }
             }
             fieldset.classList.add('hidden');
             fieldsets[count].classList.remove('hidden');
