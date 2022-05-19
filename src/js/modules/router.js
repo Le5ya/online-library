@@ -7,7 +7,7 @@ const backBtns = document.querySelectorAll('.header__btn-back');
 
 const addBtns = document.querySelectorAll('.header__btn-add, .library__add-btn');
 
-const router = new Navigo('/', {
+export const router = new Navigo('/', {
 	hash: true,
 });
 const closeAllPage = () => {
@@ -33,7 +33,6 @@ router.on({
 	}
 }).resolve();
 
-closeAllPage();
 
 addBtns.forEach((btn) => {
 	btn.addEventListener('click', () => {

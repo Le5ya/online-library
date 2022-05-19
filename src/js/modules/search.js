@@ -7,6 +7,8 @@ const closeSearch = ({ target }) => {
 	}
 	search.classList.remove('search_active');
 }
+document.body.addEventListener('click', closeSearch);
+closeSearch()
 
 btnSearch.forEach(btn => {
 	btn.addEventListener('click', () => {

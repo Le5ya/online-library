@@ -1,6 +1,7 @@
-export const controlField = (btn, list) => {
+export const controlField = (btn, list, offList) => {
 	btn.addEventListener('click', () => {
 		list.classList.toggle('fields__list_active');
+		offList.classList.remove('fields__list_active')
 	});
 	list.addEventListener('click', ({ target }) => {
 		if (target.classList.contains('fields__button')) {
@@ -8,5 +9,3 @@ export const controlField = (btn, list) => {
 		}
 	});
 };
-controlField(fieldsBtnSort, fieldsListSort);
-controlField(fieldsBtnFilter, fieldsListFilter);
