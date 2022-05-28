@@ -1,13 +1,34 @@
-import { router } from './router.js'
+import { router } from './router.js';
 
+const fieldsets = document.querySelectorAll('.add__fieldset');
+const addBtn = document.querySelector('.add__btn');
+const form = document.querySelector('.add__form');
+const btnBack = document.querySelector('.add__btn-back');
+
+let count = 0;
+
+const sendBook = () => {
+	const data = true;
+	if (data) {
+		form.reset();
+		router.navigate('/');
+		count = 0;
+		addBtn.textContent = 'Далее';
+	}
+
+}
 const changeFieldset = () => {
-	const fieldsets = document.querySelectorAll('.add__fieldset');
-	const addBtn = document.querySelector('.add__btn');
-	const form = document.querySelector('.add__form');
+	if (count === fieldsets.length - 1) {
+		addBtn.textContent = 'Добавить книгу';
+	} else {
+		addBtn.textContent = 'Далее';
+	}
+	fieldsets[count].classList.remove('hidden');
 
-	let count = 0;
+}
 
-	addBtn.addEventListener('click', ({ target }) => {
+const initFieldset = () => {
+	addBtn.addEventListener('click', () => {
 		const fieldset = fieldsets[count];
 
 		let valid = true;
@@ -20,26 +41,33 @@ const changeFieldset = () => {
 				elem.classList.remove('no-valid');
 			}
 		}
-		if (valid) {
+		if(!valid) return;
+
+		fieldset.classList.add('hidden');
+		
 			count += 1;
 
-			if (count === fieldsets.length - 1) {
-				addBtn.textContent = 'Добавить книгу';
-			}
 			if (count === fieldsets.length) {
+				count = 0;
+				sendBook();
+			}	
+			changeFieldset();
+	});
 
-				const data = true;
-				if (data) {
-					form.reset();
-					router.navigate('/');
-					count = 0;
-					addBtn.textContent = 'Далее';
-				}
-			}
-			fieldset.classList.add('hidden');
-			fieldsets[count].classList.remove('hidden');
+	btnBack.addEventListener('click', () => {
+		if(count === 0) {
+			form.reset();
+			router.navigate('/');
+			return;
 		}
+		fieldsets[count].classList.add('hidden');
+		count--;
+		changeFieldset();
 
-	})
+	});
+
 }
-export default changeFieldset;
+
+	
+
+ export default initFieldset;
