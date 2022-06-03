@@ -1,4 +1,5 @@
 import { router } from './router.js';
+import { clearPreview } from "./upload.js";
 
 const fieldsets = document.querySelectorAll('.add__fieldset');
 const addBtn = document.querySelector('.add__btn');
@@ -11,6 +12,7 @@ const sendBook = () => {
 	const data = true;
 	if (data) {
 		form.reset();
+		clearPreview();
 		router.navigate('/');
 		count = 0;
 		addBtn.textContent = 'Далее';
@@ -41,22 +43,23 @@ const initFieldset = () => {
 				elem.classList.remove('no-valid');
 			}
 		}
-		if(!valid) return;
+		if (!valid) return;
 
 		fieldset.classList.add('hidden');
-		
-			count += 1;
 
-			if (count === fieldsets.length) {
-				count = 0;
-				sendBook();
-			}	
-			changeFieldset();
+		count += 1;
+
+		if (count === fieldsets.length) {
+			count = 0;
+			sendBook();
+		}
+		changeFieldset();
 	});
 
 	btnBack.addEventListener('click', () => {
-		if(count === 0) {
+		if (count === 0) {
 			form.reset();
+			clearPrreview();
 			router.navigate('/');
 			return;
 		}
@@ -68,6 +71,6 @@ const initFieldset = () => {
 
 }
 
-	
 
- export default initFieldset;
+
+export default initFieldset;

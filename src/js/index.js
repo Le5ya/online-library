@@ -1,9 +1,10 @@
-import {initRouter} from './modules/router.js';
-import  './modules/router.js';
+import { initRouter } from './modules/router.js';
+import './modules/router.js';
 import './modules/search.js';
 import changeFieldset from "./modules/changeFieldset.js";
 import { controlField } from './modules/controlField.js';
-import upload from './modules/upload.js';
+import './modules/upload.js';
+import { renderListBooks } from './modules/renderListBooks.js';
 
 const fieldsBtnSort = document.querySelector('.fields__btn_sort');
 const fieldsListSort = document.querySelector('.fields__list_sort');
@@ -12,12 +13,12 @@ const fieldsListFilter = document.querySelector('.fields__list_filter');
 
 const init = () => {
 
-initRouter();
+	initRouter();
+	renderListBooks();
+	controlField(fieldsBtnSort, fieldsListSort, fieldsListFilter);
+	controlField(fieldsBtnFilter, fieldsListFilter, fieldsListSort);
 
-controlField(fieldsBtnSort, fieldsListSort, fieldsListFilter);
-controlField(fieldsBtnFilter, fieldsListFilter, fieldsListSort);
-
-changeFieldset();
+	changeFieldset();
 };
 
 init();
