@@ -53,8 +53,8 @@ export const renderListBooks = async () => {
 	const [books, labels] = await Promise.all([getBooks(), getLabels()]);
 
 	libraryList.textContent = '';
-		
-	books.forEach(({author, description, id, image, label, rating, title}) => {
+
+	books.forEach(({ author, description, id, image, label, rating, title }) => {
 		const item = document.createElement('li');
 		item.classList.add('library__item');
 		item.innerHTML = `
@@ -79,5 +79,5 @@ export const renderListBooks = async () => {
 		libraryList.append(item);
 
 	});
-	
+
 };

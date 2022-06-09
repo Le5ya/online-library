@@ -1,4 +1,7 @@
 import Navigo from 'navigo';
+import { renderListBooks } from './renderListBooks.js';
+import { renderBook } from './renderBook.js';
+
 
 export const router = new Navigo('/', {
 	hash: true,
@@ -24,11 +27,24 @@ export const initRouter = () => {
 			closeAllPage();
 			library.classList.remove('hidden');
 			document.body.classList.remove('body_gradient');
+			renderListBooks();
+
+
+
+
+
+
+
+
+
+
+
 		},
 		'book': () => {
 			closeAllPage();
 			book.classList.remove('hidden');
 			document.body.classList.add('body_gradient');
+			renderBook(id);
 		},
 		'add': () => {
 			closeAllPage();
@@ -36,8 +52,8 @@ export const initRouter = () => {
 			document.body.classList.add('body_gradient');
 		}
 	}).resolve();
-	
-	
+
+
 	addBtns.forEach((btn) => {
 		btn.addEventListener('click', () => {
 			router.navigate('add');
