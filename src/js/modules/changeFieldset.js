@@ -59,7 +59,7 @@ const initFieldset = () => {
 	btnBack.addEventListener('click', () => {
 		if (count === 0) {
 			form.reset();
-			clearPrreview();
+			clearPreview();
 			router.navigate('/');
 			return;
 		}
